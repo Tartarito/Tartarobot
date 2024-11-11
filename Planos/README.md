@@ -7,4 +7,4 @@ Subir al repositorio todos los modelos y planos utilizados para construir el bat
 
 
 [Ir a la carpeta 3D](#modelo-3d)
-[Ir a la carpeta 3D](./Planos/3D/)
+[Ir a la carpeta 3D](./3D/)
