@@ -2,9 +2,7 @@
 
 Subir al repositorio todos los modelos y planos utilizados para construir el battlebot:
 
-### Modelo 3D
+### Modelo 3D (./3D/)
 ### Planos tipo boceto
 
 
-[Ir a la carpeta 3D](./3D/)
-[Ir al Modelo 3D](#modelo-3d)
