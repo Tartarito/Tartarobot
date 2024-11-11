@@ -7,7 +7,7 @@ En las profundidades del infierno, en un rincón recóndito de este vasto lugar,
 <dejare una foto de prueba por mientras.>
 
 
-![Robot](/Multimedia/skibirobot2.jpg)
+![Robot](/Multimedia/skibirobot2.jpeg)
 
 
 ## Integrantes
