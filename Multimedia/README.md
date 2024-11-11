@@ -1,2 +1,2 @@
-# Subir imagenes de referencia
-e imagenes para usar en la portada del repositorio
+# Subir imágenes de referencia
+También imágenes para usar en la portada del repositorio
