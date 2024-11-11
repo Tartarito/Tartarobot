@@ -6,5 +6,5 @@ Subir al repositorio todos los modelos y planos utilizados para construir el bat
 ### Planos tipo boceto
 
 
-[Ir a la carpeta 3D](#modelo-3d)
 [Ir a la carpeta 3D](./3D/)
+[Ir al Modelo 3D](#modelo-3d)
