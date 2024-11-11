@@ -3,8 +3,12 @@
 
 ### Historia del Battlebot
 En las profundidades del infierno, en un rincón recóndito de este vasto lugar, junto a muchas criaturas del averno despedazadas, en un camino de destrucción a su paso, yacía Tártaro, una criatura que masacraba todo lo que aparecía a su paso gracias a su relación simbiótica con Freddy Fazbear, un pequeño engendro de las llamas que abatía a todo aquel que Tártaro atrapaba con su gran mandíbula. Gracias a su gran coordinación, son reconocidos en el infierno como "ásvesti flóga" (llama inextinguible), aquellos a quienes hasta el mismo Hades temía.
-  <dejare una foto de prueba por mientras.>
+
+<dejare una foto de prueba por mientras.>
+
+
 ![Robot](/Multimedia/skibirobot.png)
+
 
 ## Integrantes
 - Franco Monetta - Facultad de Ciencias Físicas y Matemáticas 
