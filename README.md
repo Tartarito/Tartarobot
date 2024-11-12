@@ -22,7 +22,7 @@ En las profundidades del infierno, en un rincón recóndito de este vasto lugar,
 ### Estrategia utilizada
   
 #### Ofensiva
-Desplegar un mini-battlebot, Tartarito, que hostigue al enemigo con golpes ligeros de forma constante.
+Desplegar un mini-battlebot, Cerberito, que hostigue al enemigo con golpes ligeros de forma constante.
 
 #### Defensiva
 El battlebot principal, Tártaro, atrapará al oponente con sus mandíbulas, inmovilizándolo y evitando que contraataque, mientras permite que el minibot continúe hostigándolo.
