@@ -28,7 +28,6 @@ Desplegar un mini-battlebot, Cerberito, que hostigue al enemigo con golpes liger
 El battlebot principal, Tártaro, atrapará al oponente con sus mandíbulas, inmovilizándolo y evitando que contraataque, mientras permite que el minibot continúe hostigándolo.
 
 ### Diagrama funcional
-< Necesitamos una foto dibujo lo que sea de un diagrama funcional, ojala de los 2 robots>
 ![Robot](/Diagrama/diagramatartarito.jpeg)
 ## Licencia
 <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />Esta obra está bajo una <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Licencia Creative Commons Atribución-NoComercial 4.0 Internacional</a>.
