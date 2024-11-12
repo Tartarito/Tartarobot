@@ -15,20 +15,19 @@
 uint8_t RemoteXY_CONF[] =   // 173 bytes
   { 255,4,0,0,0,166,0,19,0,0,0,0,28,1,200,84,1,1,13,0,
   130,141,13,17,65,9,29,129,147,17,6,4,64,26,240,159,148,186,0,129,
-  147,71,6,4,64,26,240,159,148,187,0,130,17,15,59,59,9,29,4,143,
-  15,13,60,0,37,26,5,19,17,55,55,0,36,26,31,129,181,3,14,3,
-  64,26,84,101,115,116,32,76,105,103,104,116,0,129,6,39,11,12,64,26,
-  226,151,128,0,129,76,38,11,12,64,26,226,150,182,0,129,41,5,12,12,
-  64,26,226,150,178,0,129,41,74,12,12,64,26,226,150,188,0,129,139,8,
-  22,4,64,26,74,97,119,32,67,111,110,116,114,111,108,0,2,176,8,21,
-  13,0,2,26,31,31,79,78,0,79,70,70,0 };
-  
+  147,71,6,4,64,26,240,159,148,187,0,130,17,15,59,59,9,29,10,181,
+  6,14,14,48,4,26,31,79,78,0,31,79,70,70,0,4,143,15,13,60,
+  0,37,26,5,19,17,55,55,32,36,26,31,129,181,3,14,3,64,26,84,
+  101,115,116,32,76,105,103,104,116,0,129,6,39,11,12,64,26,226,151,128,
+  0,129,76,38,11,12,64,26,226,150,182,0,129,41,5,12,12,64,26,226,
+  150,178,0,129,41,74,12,12,64,26,226,150,188,0,129,139,8,22,4,64,
+  26,74,97,119,32,67,111,110,116,114,111,108,0 };
+
 // this structure defines all the variables and events of your control interface 
 struct {
-   
 
     // input variables
-  int8_t slider_01; // from -180 to 180
+  int8_t slider_01; // from 0 to 100
   int8_t joystick_01_x; // from -100 to 100
   int8_t joystick_01_y; // from -100 to 100
   uint8_t switch_01; // =1 if switch ON and =0 if OFF
@@ -47,14 +46,12 @@ struct {
 #define PIN_MOTOR_LEFT_UP 4
 #define PIN_MOTOR_LEFT_DN 5
 #define PIN_MOTOR_LEFT_SPEED 13
-
+#include <Servo.h>
+Servo myServo1, myServo2; // Crear dos objetos Servo
+int servoPin1 = D3;  // Pin para el primer servo
+int servoPin2 = D4;  // Pin para el segundo servo
 /* defined the LED pin */
 #define PIN_LED 2
-
-
-#include <Servo.h>
-Servo myServo;
-int servoPin = D2;
 
 /* defined two arrays with a list of pins for each motor */
 unsigned char RightMotor[3] = 
@@ -96,7 +93,8 @@ void setup()
   pinMode (PIN_MOTOR_LEFT_UP, OUTPUT);
   pinMode (PIN_MOTOR_LEFT_DN, OUTPUT);
   pinMode (PIN_LED, OUTPUT);
-  myServo.attach(servoPin);
+  myServo1.attach(servoPin1); // Conectar el primer servo al pin D2
+  myServo2.attach(servoPin2); // Conectar el segundo servo al pin D3
   // TODO you setup code
   
 }
@@ -105,15 +103,6 @@ void loop()
 { 
   RemoteXY_Handler ();
   
-  // Controlar el servomotor con el valor del slider (-100 a 100)
-  int sliderValue = RemoteXY.slider_01;  // Obtener el valor del slider (-100 a 100)
-
-  // Mapea el valor del slider (-100 a 100) al rango (0 a 180)
-  int angle = map(sliderValue, -100, 100, -180, 180);
-
-  // Mueve el servomotor a la posición deseada
-  myServo.write(angle);
-
   
   /* manage LED pin */
   digitalWrite (PIN_LED, (RemoteXY.switch_01==0)?HIGH:LOW);
@@ -125,6 +114,20 @@ void loop()
   // TODO you loop code
   // use the RemoteXY structure for data transfer
   // do not call delay(), use instead RemoteXY_delay() 
+  //AGREGADO SERVO
+  // Controlar ambos servos con el valor del slider (-100 a 100)
+  int sliderValue = RemoteXY.slider_01;  // Obtener el valor del slider (-100 a 100)
 
+  // Mapea el valor del slider (-100 a 100) al rango (0 a 180) para el primer servo
+  int angle1 = map(sliderValue, -100, 100, 0, 180);
+
+  // Mapea el valor del slider (-100 a 100) al rango (180 a 0) para el segundo servo
+  int angle2 = map(sliderValue, -100, 100, 180, 0);
+
+  // Mueve el primer servomotor a la posición deseada
+  myServo1.write(angle1);
+
+  // Mueve el segundo servomotor a la posición inversa
+  myServo2.write(angle2);
 
 }
