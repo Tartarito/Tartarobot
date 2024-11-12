@@ -9,7 +9,7 @@ En las profundidades del infierno, en un rincón recóndito de este vasto lugar,
 
 
 
-![Robot](/Multimedia/skibirobot2.jpeg)
+![Robot](/Multimedia/tartarobot.png)
 
 
 ## Integrantes
