@@ -1,4 +1,4 @@
-# TartaroGaming - 2024
+# TartaroBot - 2024
 
 
 ### Historia del Battlebot
