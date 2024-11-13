@@ -102,7 +102,7 @@ void loop()
   
   /* manage LED pin */
   /* manage the right motor */
-  Wheel (RightMotor, ((-1) * RemoteXY.joystick_01_y) - RemoteXY.joystick_01_x);
+  Wheel (RightMotor, ((1) * RemoteXY.joystick_01_y) - RemoteXY.joystick_01_x);
   /* manage the left motor */
   Wheel (LeftMotor, ((-1) * RemoteXY.joystick_01_y) + RemoteXY.joystick_01_x);
   // TODO you loop code
