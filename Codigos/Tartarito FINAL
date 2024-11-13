@@ -77,8 +77,8 @@ void Wheel (unsigned char * motor, int v)
 
 void turnOnSpot() {
   // Right motor backward and left motor forward for rotating on spot
-  Wheel(RightMotor, 50);  // Right motor backward at half speed
-  Wheel(LeftMotor, 50);   // Left motor forward at half speed
+  Wheel(RightMotor, 100);  // Right motor backward at half speed
+  Wheel(LeftMotor, 100);   // Left motor forward at half speed
 }
 
 void setup() 
@@ -105,7 +105,7 @@ void loop()
     turnOnSpot();  // Activate the turning on spot behavior
   } else {
     // If button is not pressed, control the robot with the joystick
-    Wheel(RightMotor, ((-1) * RemoteXY.joystick_01_y) - RemoteXY.joystick_01_x);
+    Wheel(RightMotor, ((1) * RemoteXY.joystick_01_y) - RemoteXY.joystick_01_x);
     Wheel(LeftMotor, ((-1) * RemoteXY.joystick_01_y) + RemoteXY.joystick_01_x);
   }
 }
